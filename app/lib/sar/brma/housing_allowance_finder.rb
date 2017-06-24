@@ -8,13 +8,13 @@ module SAR
 
         {
           bmra_name: result[NAME_INDEX],
-          lha_rate: result[LHA_RATE_INDEX]
+          lha_rate: result[LHA_RATE_INDEX].to_f
         }
       end
 
       private
 
-      NAME_INDEX = 1
+      NAME_INDEX = 2
       LHA_RATE_INDEX = 6
 
       def find_by(brma_number)
