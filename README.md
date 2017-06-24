@@ -23,8 +23,6 @@ Hello
 ]
 ```
 
-{:total_results=>1099, :highest_rent=>1500, :lowest_rent=>80, :mean_rent=>394, :median_rent=>215.0}
-
 ### brma
 Broad Rental Market Areas
 
