@@ -8,8 +8,7 @@ module SAR
 
         {
           bmra_name: result[NAME_INDEX],
-          lha_rate: result[LHA_RATE_INDEX].to_f,
-          max_rent: result[MAX_RENT_INDEX].to_f
+          lha_rate: result[LHA_RATE_INDEX].to_f
         }
       end
 
@@ -17,7 +16,6 @@ module SAR
 
       NAME_INDEX = 2
       LHA_RATE_INDEX = 6
-      MAX_RENT_INDEX = 5
 
       def find_by(brma_number)
         @result_row ||= parsed_csv.select do |row|
