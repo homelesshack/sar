@@ -1,14 +1,14 @@
 module SAR
-  class PostcodeToBmra
+  class PostcodeToBrma
     def initialize(postcode)
       @postcode = postcode
     end
 
     def convert
-      if bmra_by_postcode
+      if brma_by_postcode
         { status: 'found',
-          bmra: bmra_by_postcode.bmra,
-          name: bmra_by_postcode.name }
+          brma: brma_by_postcode.brma,
+          name: brma_by_postcode.name }
       else
         { status: 'not_found' }
       end
@@ -22,8 +22,8 @@ module SAR
       postcode[0..-3].gsub(/[^0-9a-z]/i, '').upcase
     end
 
-    def bmra_by_postcode
-      @result ||= Postcode2Bmra.find_by(postcode: normalized_postcode)
+    def brma_by_postcode
+      @result ||= Postcode2Brma.find_by(postcode: normalized_postcode)
     end
   end
 end
