@@ -1,4 +1,4 @@
-class PriceDiscrepancyReports < ApplicationController
+class PriceDiscrepancyReportsController < ApplicationController
   def index
   end
 
