@@ -103,8 +103,22 @@ function render(data) {
                 text: 'Government distribution'
             },
             scales: {
-                xAxes: [{ticks: {min: 0}}],
-                yAxes: [{ticks: {min: 0}}]
+                xAxes: [{
+                  ticks: {
+                    min: 0,
+                    callback: function(value, index, values) {
+                        return 'property' + value;
+                    }
+                },
+                }],
+                yAxes: [{
+                  ticks: {
+                    min: 0,
+                    callback: function(value, index, values) {
+                        return '£' + value;
+                    }
+                  }
+                }]
             }
         }
     });
